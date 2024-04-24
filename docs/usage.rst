@@ -10,7 +10,7 @@ Example::
 
     from django.contrib.auth.models import User
 
-    from app_metrics.utils import create_metric, metric
+    from app_metrics.utils import create_metric, metric, gauge
 
     user1 = User.objects.get(pk='bob')
     user2 = User.objects.get(pk='jane')
@@ -46,7 +46,7 @@ Example::
     # Gauges are current status type dials (think fuel gauge in a car)
     # These simply store and retrieve a value
     gauge('current_fuel', '30')
-    guage('load_load', '3.14')
+    gauge('load_load', '3.14')
 
 Management Commands
 ===================
